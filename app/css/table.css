@@ -1,0 +1,31 @@
+.custc{
+	width: 30px;
+	height: 15px;
+}
+.fullc{
+	width: 30px;
+	height: 30px;
+}
+.topc{
+	border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.bottomc{
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+.webk{
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.colorc{
+	background-color: lightgrey;
+}
+.boxt{
+	width:100px;
+	height: 50px;
+	background-color: lightgrey;
+	text-align: center;
+	line-height: 50px;
+}

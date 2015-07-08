@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="spot" ng-controller="spotCtrl">
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<head >
+	<title>SPOT</title>
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/table.css">
+	<script type="text/javascript" src="js/controller.js"></script>
+	<script type="text/javascript" src="js/pop.js"></script>
+	<script src="js/services.js"></script>
+
+	
+	
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> -->
+	
+	</head>
+	<body >
+	<div id="spot_app" >
+		<div id="spot_header">
+			<div id="circle"><div id="spot_div">Spot</div></div>
+		</div>
+		<div id="spot_filter">
+			<div id="spot_office">
+				Sprinklr Office
+			</div>
+			<div id="spot_search">
+				<input ng-model="query" placeholder="Search...">
+				<select ng-model="orderProp">
+					<option value="team"></option>
+					<option value="project"></option>
+				</select>
+
+			</div>
+			<br style="clear:both;"/>
+			
+		</div>
+		<div id="spot_display">
+			<ul class="tab" >
+				<li  ng-repeat="x in tables" style="margin-left: 4%; display: inline-block;width: 27%;vertical-align: top;padding:1%;">
+					<div style="width:100px;" id="spot_table">
+						<div style="width: 100px">
+							<div class="custc topc webk colorc" style="position: relative;left:10px;top:0px;float:left;" data-toggle="popover" data-content='<div style="height: 200px; width: 150px; padding: 1%;">
+	<div style="height: 50px; padding: 1%;">
+		<div style="float: left; padding: 1%;"><img style="width: 30px; height: 30px;" src="images/{{x.seat1.emp}}.JPG"/></div>
+		<div style="float: right; padding: 1%;"><span style="font-size: 120%;">{{x.seat1.emp}}</span></br><span>{{x.seat1.des}}</span></div>
+		<br style="clear: both;"/>
+	</div>
+	<div style="padding: 1%;"><span style="font-size: 120$;">Team</span></br><span>{{x.seat1.team}}</span></div>
+	<div style="padding: 1%;"><span style="font-size: 120$;">Project</span></br><span>{{x.seat1.proj}}</span></div>
+</div>'></div>
+							<div class="custc topc webk colorc" style="position: relative ;left:30px;top:0px;float:left;" data-toggle="popover"></div>
+							<br style="clear:both;"/>
+						</div>
+						<div class="boxt" style="position: relative; "><span style="vertical-align: middle; line-height: normal;">{{x.name}}</span></div>
+						<div style="width: 100px;">
+							<div class="custc bottomc webk colorc" style="position: relative;left:10px;top:4.5px;float:left;" data-toggle="popover"></div>
+							<div class="custc bottomc webk colorc" style="position: relative ;left:30px;top:4.5px;float: left;" data-html:true data-toggle="popover" data-content="<p>{{x.seat1.emp}}</p>"></div>
+							<br style="clear:both;"/>
+						</div>
+						<script type="text/javascript">
+							var popmsg = '<p>empty seat</p>';
+							
+							$('[data-toggle="popover"]').popover({trigger: 'hover', placement: 'right', content: popmsg, html: true});
+						</script>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</body>
+</html>

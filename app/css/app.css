@@ -1,0 +1,79 @@
+/* app css stylesheet */
+
+
+body {
+  background-color: lightgrey;
+    
+    padding: 1% 25% 1% 25%;
+    
+}
+
+div#circle {
+  border-radius: 50%;
+  height:100px;
+  width: 100px;
+  background-color: grey;
+  line-height: 100px;
+  
+  
+  /* width and height can be anything, as long as they're equal */
+}
+
+div#spot_div{
+    text-align: center;
+    
+    font-size: 200%;
+
+    color: white;
+}
+div#spot_app{
+  background-color: ;
+  padding: 1%;
+}
+
+div#spot_header{
+  background-color: gree;
+    padding: 5px;
+}
+
+div#spot_filter{
+  background-color: blueviole;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div#spot_office{   
+    width: 40%;
+    float: left;
+    margin-left: 0.5%;
+    
+    font-size: 150%;
+}
+
+div#spot_search {
+    margin-right: 0.5%;
+    float: right;
+    
+    font-size: 150%;
+}
+
+div#spot_display{
+  background-color: white;
+  padding: 50px;
+    border: 1px solid;
+}
+
+ul.tab {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*li.tables{
+  display: inline-block;
+  width: 100px;
+  vertical-align: top;
+}
+*/
