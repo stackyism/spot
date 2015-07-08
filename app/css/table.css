@@ -19,8 +19,11 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-.colorc{
+.colorc, .no{
 	background-color: lightgrey;
+}
+.colorb, .yes{
+	background-color: #3D352A;
 }
 .boxt{
 	width:100px;
