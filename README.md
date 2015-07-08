@@ -1,4 +1,4 @@
-# angular-seed — the seed for AngularJS apps
+# spot using angular-seed over AngularJS framework
 
 This is application is made over the skeleton of angular-seed.
 
