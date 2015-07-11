@@ -34,7 +34,7 @@
 			</div>
 			<div id="spot_search">
 				<input ng-model="query" placeholder="Search..." onkeyup="myFunction(this.value)">
-				<div id="menu" class="glyphicon glyphicon-glass" data-content="<input type='radio' ng-model='teamdes' value='Mobile Dev'>Mobile Dev"></div>
+				<div id="menu" class="glyphicon glyphicon-glass" data-content='<input type="radio"  > {{showmenu}}'></div>
 
 			</div>
 			<br style="clear:both;"/>
@@ -45,7 +45,8 @@
 				<li  ng-repeat="x in tables" style="margin-left: 4%; display: inline-block;width: 27%;vertical-align: top;padding:1%;">
 					<div style="width:100px;" class="spot_table">
 						<div style="width: 100px">
-						<div ng-class="x.seat1.seated" class="custc topc webk {{x.seat1.team | custFilter:query}}" id="{{x.seat1.emp}}" style="position: relative;left:10px;top:0px;float:left;" data-toggle="popover" data-content='<div style="height: 150px; width: 150px; padding: 1%;">
+						<div  class="no custc topc webk " style="position: relative;left:10px;top:0px;float:left;" >
+							<div ng-show="x.seat1.seated=='yes'" ng-class="x.seat1.seated"  id="{{x.seat1.emp}}" class="custc topc webk {{x.seat1.team | custFilter:query}}" data-toggle="popover" data-content='<div style="height: 150px; width: 150px; padding: 1%;">
 							<div style="height: 50px; padding: 1%;">
 							<div style="float: left; padding: 1%;"><img style="width: 40px; height: 40px;" src="images/{{x.seat1.emp}}.jpg"/></div>
 							<div style="float: right;"><span style="font-size: 90%;">{{x.seat1.emp}}</span></br><span><b>{{x.seat1.des}}</b></span></div>
@@ -53,9 +54,10 @@
 							</div>
 							<div style="padding: 1%;"><span style="font-size: 70%;color: grey;">Team</span></br><span>{{x.seat1.team}}</span></div>
 							<div style="padding: 1%;"><span style="font-size: 70%;color: grey;">Current Project</span></br><span>{{x.proj}}</span></div>
-							</div>'><div></div>
+							</div>'></div>
 						</div>
-						<div ng-class="x.seat2.seated" class="custc topc webk {{x.seat2.team | custFilter:query}}" id="{{x.seat2.emp}}" style="position: relative ;left:30px;top:0px;float:left;" data-toggle="popover" data-content='<div style="height: 150px; width: 150px; padding: 1%;">
+						<div  class="no custc topc webk"  style="position: relative ;left:30px;top:0px;float:left;" >
+							<div ng-show="x.seat2.seated=='yes'" ng-class="x.seat2.seated" class="custc topc webk {{x.seat2.team | custFilter:query}}" id="{{x.seat2.emp}}" data-toggle="popover" data-content='<div style="height: 150px; width: 150px; padding: 1%;">
 							<div style="height: 50px; padding: 1%;">
 							<div style="float: left; padding: 1%;"><img style="width: 40px; height: 40px;" src="images/{{x.seat2.emp}}.jpg"/></div>
 							<div style="float: right;"><span style="font-size: 90%;">{{x.seat2.emp}}</span></br><span><b>{{x.seat2.des}}</b></span></div>
@@ -63,14 +65,14 @@
 							</div>
 							<div style="padding: 1%;"><span style="font-size: 70%;color: grey;">Team</span></br><span>{{x.seat2.team}}</span></div>
 							<div style="padding: 1%;"><span style="font-size: 70%;color: grey;">Current Project</span></br><span>{{x.proj}}</span></div>
-							</div>'>
-								
+							</div>'></div>	
 						</div>
 							<br style="clear:both;"/>
 						</div>
 						<div class="boxt" style="position: relative; "><span style="vertical-align: middle; line-height: normal;">{{x.name}}</span></div>
 						<div style="width: 100px;">
-							<div ng-class="x.seat3.seated" class="custc bottomc webk {{x.seat3.team | custFilter:query}}" id="{{x.seat3.emp}}" style="position: relative;left:10px;top:4.5px;float:left;" data-toggle="popover" data-content='<div style="height: 150px; width: 150px; padding: 1%;">
+							<div  class="no custc bottomc webk"  style="position: relative;left:10px;top:4.5px;float:left;" >
+							<div ng-show="x.seat3.seated=='yes'" ng-class="x.seat3.seated" id="{{x.seat3.emp}}" class="custc bottomc webk {{x.seat3.team | custFilter:query}}"  data-toggle="popover" data-content='<div style="height: 150px; width: 150px; padding: 1%;">
 							<div style="height: 50px; padding: 1%;">
 							<div style="float: left; padding: 1%;"><img style="width: 40px; height: 40px;" src="images/{{x.seat3.emp}}.jpg"/></div>
 							<div style="float: right;"><span style="font-size: 90%;">{{x.seat3.emp}}</span></br><span><b>{{x.seat3.des}}</b></span></div>
@@ -78,9 +80,10 @@
 							</div>
 							<div style="padding: 1%;"><span style="font-size: 70%;color: grey;">Team</span></br><span>{{x.seat3.team}}</span></div>
 							<div style="padding: 1%;"><span style="font-size: 70%;color: grey;">Current Project</span></br><span>{{x.proj}}</span></div>
-							</div>'>
+							</div>'></div>
 							</div>
-							<div ng-class="x.seat4.seated" class="custc bottomc webk {{x.seat4.team | custFilter:query}}" id="{{x.seat4.emp}}" style="position: relative ;left:30px;top:4.5px;float: left;" data-toggle="popover" data-content='<div style="height: 150px; width: 150px; padding: 1%;">
+							<div  class="no custc bottomc webk"  style="position: relative ;left:30px;top:4.5px;float: left;" >
+							<div ng-show="x.seat4.seated=='yes'" ng-class="x.seat4.seated" class = "custc bottomc webk  {{x.seat4.team | custFilter:query}}" id="{{x.seat4.emp}}" data-toggle="popover" data-content='<div style="height: 150px; width: 150px; padding: 1%;">
 							<div style="height: 50px; padding: 1%;">
 							<div style="float: left; padding: 1%;"><img style="width: 40px; height: 40px;" src="images/{{x.seat4.emp}}.jpg"/></div>
 							<div style="float: right;"><span style="font-size: 90%;">{{x.seat4.emp}}</span></br><span><b>{{x.seat4.des}}</b></span></div>
@@ -88,7 +91,7 @@
 							</div>
 							<div style="padding: 1%;"><span style="font-size: 70%;color: grey;">Team</span></br><span>{{x.seat4.team}}</span></div>
 							<div style="padding: 1%;"><span style="font-size: 70%;color: grey;">Current Project</span></br><span>{{x.proj}}</span></div>
-							</div>'>
+							</div>'></div>
 							</div>
 							<br style="clear:both;"/>
 						</div>
