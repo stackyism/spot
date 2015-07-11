@@ -25,6 +25,9 @@
 .colorb, .yes{
 	background-color: #3D352A;
 }
+.try{
+	background-color: lightblue;
+}
 .boxt{
 	width:100px;
 	height: 50px;

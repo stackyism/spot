@@ -71,9 +71,8 @@ ul.tab {
   list-style: none;
 }
 
-/*li.tables{
-  display: inline-block;
-  width: 100px;
-  vertical-align: top;
+div#menu{
+  border: 3px solid black;
+  background-color: white;
 }
-*/
+
