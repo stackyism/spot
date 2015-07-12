@@ -1,6 +1,6 @@
 # spot using angular-seed over AngularJS framework
 
-This is application is made over the skeleton of angular-seed.
+This application is made over the skeleton of angular-seed.
 
 - The interactive part of the UI is based on the ng-repeat directive of angular-js. 
 
@@ -21,6 +21,13 @@ which is used to parse data from json files and export it to the main page.
 
 - Folder "partial" contains the components "pop.html" used to show a pop-up with the seated employee details and "table.html" which consists the table element used in main page "index.html".
 
+- Drag and drop is a bit glitchy right now. 
+
+- The menu for highlighting team members is not currently linked with the main rendering, but it can be filtered by entering the name of team or job title in the search box. For an example, write "Mobile Dev" or "HR" in the search box and it will highlight the members.
+
+- Popup generated over the employee after searching the name is needed once to be hovered to be removed. It is a small glitch which can be removed in future versions.
+
+
 Usage: 
 1. Please download the folder.
 2. Open terminal.
@@ -29,7 +36,7 @@ Usage:
 
 "npm start" will automatically install the dependency if needed as specificed in "package.json" and it also runs "bower install" which in turn uses dependencies missing. It also initiates a local server on port 8000 (as used) using Node.
 
-Note: Please make sure to have Node Installed.
+Note: Please make sure to have Node Installed. Please have interenet access for jquery library is linked online.
 
 
 For more information on AngularJS please check out http://angularjs.org/
