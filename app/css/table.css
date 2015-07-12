@@ -28,6 +28,9 @@
 .try{
 	background-color: lightblue;
 }
+.drag{
+	background-color: red;
+}
 .boxt{
 	width:100px;
 	height: 50px;
